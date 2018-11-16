@@ -15,7 +15,7 @@ class SobjectizerConan(ConanFile):
 
     settings = "os", "compiler", "build_type", "arch"
 
-    requires = "sobjectizer/5.5.23@stiffstream/testing"
+    requires = "sobjectizer/5.5.23@stiffstream/testing", "asio/1.12.0@bincrafters/stable"
 
     generators = "cmake"
 
