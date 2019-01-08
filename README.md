@@ -20,7 +20,7 @@ conan remote add public-conan https://api.bintray.com/conan/bincrafters/public-c
 2. Add so_5_extra to `conanfile.txt` of your project:
 ```
 [requires]
-so5extra/1.2.1@stiffstream/testing
+so5extra/1.2.2@stiffstream/stable
 ```
 It also may be necessary to specify `shared` option for SObjectizer. For example, for build SObjectizer as a static library:
 ```
@@ -44,7 +44,7 @@ conan_basic_setup()
 find_package(sobjectizer CONFIG REQUIRED)
 find_package(so5extra CONFIG REQUIRED)
 ...
-target_link_libraries(your_target sobjectizer::SharedLib) # Or so_5_extra::StaticLib
+target_link_libraries(your_target sobjectizer::SharedLib) # Or sobjectizer::StaticLib
 target_link_libraries(your_target sobjectizer::so5extra)
 ```
 
