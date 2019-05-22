@@ -4,7 +4,7 @@ import os
 
 class SobjectizerConan(ConanFile):
     name = "so5extra"
-    version = "1.2.3"
+    version = "1.3.0"
 
     license = ["GNU Affero GPL v3", "Commercial"]
     url = "https://github.com/Stiffstream/so5extra-conan"
@@ -15,16 +15,16 @@ class SobjectizerConan(ConanFile):
 
     settings = "os", "compiler", "build_type", "arch"
 
-    requires = "sobjectizer/5.5.24.4@stiffstream/stable", "asio/1.12.2@bincrafters/stable"
+    requires = "sobjectizer/5.6.0@stiffstream/stable", "asio/1.12.2@bincrafters/stable"
 
     generators = "cmake"
 
     source_subfolder = "so5extra"
 
     def source(self):
-        source_url = "https://sourceforge.net/projects/sobjectizer/files/sobjectizer/so_5_extra"
-        tools.get("{0}/so_5_extra-{1}.zip".format(source_url, self.version))
-        extracted_dir = "so_5_extra-" + self.version
+        source_url = "https://bitbucket.org/sobjectizerteam/so5extra/downloads"
+        tools.get("{0}/so5extra-{1}.zip".format(source_url, self.version))
+        extracted_dir = "so5extra-" + self.version
         os.rename(extracted_dir, self.source_subfolder)
 
     def build(self):
