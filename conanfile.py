@@ -4,7 +4,7 @@ import os
 
 class SobjectizerConan(ConanFile):
     name = "so5extra"
-    version = "1.3.0.1"
+    version = "1.3.1"
 
     license = ["GNU Affero GPL v3", "Commercial"]
     url = "https://github.com/Stiffstream/so5extra-conan"
