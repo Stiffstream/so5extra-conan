@@ -4,7 +4,7 @@ import os
 
 class SobjectizerConan(ConanFile):
     name = "so5extra"
-    version = "1.3.1.1"
+    version = "1.4.0"
 
     license = ["GNU Affero GPL v3", "Commercial"]
     url = "https://github.com/Stiffstream/so5extra-conan"
@@ -15,7 +15,7 @@ class SobjectizerConan(ConanFile):
 
     settings = "os", "compiler", "build_type", "arch"
 
-    requires = "sobjectizer/5.6.1@stiffstream/stable", "asio/1.12.2@bincrafters/stable"
+    requires = "sobjectizer/5.7.0@stiffstream/stable", "asio/1.12.2@bincrafters/stable"
 
     generators = "cmake"
 
@@ -37,5 +37,4 @@ class SobjectizerConan(ConanFile):
     def package(self):
         self.copy("*.hpp", dst="include/so_5_extra", src=self.source_subfolder + "/dev/so_5_extra")
         self.copy("license*", src=self.source_subfolder, dst="licenses",  ignore_case=True, keep_path=False)
-        self.copy("agpl-3.0.txt", src=self.source_subfolder, dst="licenses",  ignore_case=True, keep_path=False)
 
