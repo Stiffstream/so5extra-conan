@@ -4,7 +4,7 @@ import os
 
 class SobjectizerConan(ConanFile):
     name = "so5extra"
-    version = "1.4.0"
+    version = "1.4.1"
 
     license = ["GNU Affero GPL v3", "Commercial"]
     url = "https://github.com/Stiffstream/so5extra-conan"
@@ -15,7 +15,7 @@ class SobjectizerConan(ConanFile):
 
     settings = "os", "compiler", "build_type", "arch"
 
-    requires = "sobjectizer/5.7.0@stiffstream/stable", "asio/1.12.2@bincrafters/stable"
+    requires = "sobjectizer/5.7.1@stiffstream/stable", "asio/1.12.2@bincrafters/stable"
 
     generators = "cmake"
 
